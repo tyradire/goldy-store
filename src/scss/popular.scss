@@ -1,0 +1,63 @@
+@import '../scss/variables.scss';
+
+.popular {
+  max-width: 1300px;
+  margin: 130px auto 0;
+  &__title {
+    text-align: start;
+    @include popular-title;
+  }
+  &__list {
+    padding-top: 40px;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    margin: 0;
+  }
+  &__list-item {
+    position: relative;
+    width: 200px;
+    height: 259px;
+    margin-left: 20px;
+    background-color: $item-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+  &__category {
+    text-align: center;
+    vertical-align: top;
+    position: absolute;
+    bottom: 25px;
+    @include popular-item;
+  }
+}
+
+#rings {
+  width: 127px;
+  height: 100px;
+}
+#earrings {
+  width: 102px;
+  height: 130px;
+}
+#eRings {
+  width: 117px;
+  height: 93px;
+}
+#bracelets {
+  width: 141px;
+  height: 118px;
+}
+#necklace {
+  width: 128px;
+  height: 128px;
+}
+#watch {
+  width: 122px;
+  height: 147px;
+}

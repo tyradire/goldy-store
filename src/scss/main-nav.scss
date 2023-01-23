@@ -1,0 +1,59 @@
+@import '../scss/variables.scss';
+
+.main-nav {
+  max-width: 1300px;
+  height: 62px;
+  margin: 23px auto 0;
+  background-color: $block-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__links {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    @include menu-text;
+    text-transform: uppercase;
+  }
+  &__link {
+    margin-left: 60px;
+    &:first-of-type {
+      margin-left: 50px;
+      opacity: .5;
+    }
+    a {
+      cursor: pointer;
+    }
+  }
+  &__form {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    margin-right: 141px;
+    border-left: 1px solid $line-color;
+  }
+}
+
+.form {
+  &__btn {
+    cursor: pointer;
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    border: none;
+    background-color: transparent;
+    background-image: url('../images/search.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  &__search {
+    width: 106px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    @include default-text;
+    color: $text-search;
+  }
+}

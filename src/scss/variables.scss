@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+$main-color: #ffffff;
+$block-color: #f7f7f7;
+$active-color: #e46944;
+$item-color: #f8f8f8;
+
+$button-color-normal: #303030;
+$button-color-hover: #4f4f4f;
+$button-color-pressed: #000000;
+
+$tag-color-normal: #f0f0f0;
+$tag-color-hover: #dedede;
+$tag-color-pressed: #303030;
+$tag-color-sale: #5b8a8f;
+$tag-color-hit: #e1a66b;
+
+$like-color-normal: #c9c9c9;
+$like-color-hover: #969696;
+$like-color-pressed: #e24932;
+
+$text-default: #303030;
+$text-title: #e1a560;
+$text-description: #919191;
+$text-search: #a3a3a3;
+
+$line-color: #f0f0f0;
+$slider-btn-hover: #f5f5f5;
+
+@mixin default-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 400;
+  color: $text-default;
+  margin: 0;
+}
+
+@mixin sm-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 700;
+  color: $main-color;
+  margin: 0;
+}
+
+@mixin menu-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  font-weight: 500;
+  color: $text-default;
+  margin: 0;
+}
+
+@mixin title {
+  font-family: 'Prata', serif;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 400;
+  color: $text-title;
+  margin: 0;
+}
+
+@mixin description {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 300;
+  letter-spacing: 0.27em;
+  color: $text-description;
+  margin: 0;
+}
+
+@mixin slider-offer {
+  font-family: 'Prata', serif;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 400;
+  color: $text-default;
+  margin: 0;
+}
+
+@mixin slider-title {
+  font-family: 'Prata', serif;
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 400;
+  color: $text-default;
+  margin: 0;
+}
+
+@mixin popular-title {
+  font-family: 'Prata', serif;
+  font-size: 40px;
+  line-height: 1;
+  font-weight: 400;
+  color: $text-default;
+  margin: 0;
+}
+
+@mixin popular-item {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 400;
+  color: $text-default;
+  margin: 0;
+}

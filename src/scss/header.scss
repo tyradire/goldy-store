@@ -1,0 +1,113 @@
+@import '../scss/variables.scss';
+
+.header {
+  max-width: 1300px;
+  margin: 24px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__info {
+    display: flex;
+  }
+  &__logo {
+    width: 185px;
+    height: 52px;
+    cursor: pointer;
+  }
+  &__nav {
+    display: flex;
+  }
+}
+
+.info {
+  &__city-wrapper {
+    display: flex;
+  }
+  &__city-unit {
+    @include default-text;
+  }
+  &__phone-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+  }
+  &__phone-number {
+    @include default-text;
+  }
+  &__btn-select {
+    cursor: pointer;
+    background-color: transparent;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+  }
+}
+
+.logo {
+  &__title {
+    @include title;
+    text-align: left;
+    &_normal {
+      color: $text-default;
+    }
+  }
+  &__description {
+    padding-top: 6px;
+    padding-left: 2px;
+    @include description;
+  }
+}
+
+.nav {
+  &__link {
+    @include default-text;
+    cursor: pointer;
+  }
+  &__buttons {
+    margin-left: 70px;
+  }
+  &__btn {
+    width: 20px;
+    height: 20px;
+    margin-left: 28px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    &:first-of-type {
+      position: relative;
+      margin-left: 0;
+    }
+  }
+  &__favourite-value {
+    position: absolute;
+    top: -7px;
+    right: -17px;
+    width: 19px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include sm-text;
+    background-color: $active-color;
+    border-radius: 50%;
+  }
+}
+
+#flag {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+#phone {
+  margin-right: 10px;
+  width: 16px;
+  height: 16px;
+}
+#rectangle {
+  margin-left: 8px;
+  width: 8px;
+  height: 8px;
+}

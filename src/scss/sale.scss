@@ -1,0 +1,182 @@
+@import '../scss/variables.scss';
+
+.sale {
+  max-width: 1300px;
+  margin: 120px auto 0;
+  &__title {
+    text-align: start;
+    @include popular-title;
+  }
+  &__nav {
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__catalog {
+    margin-top: 36px;
+    display: flex;
+  }
+}
+
+.nav {
+  &__buttons {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    margin: 0;
+  }
+  &__button {
+    margin-left: 8px;
+    &:first-of-type {
+      margin-left: 0;
+      .nav__item {
+        color: $main-color;
+        background-color: $button-color-normal;
+      }
+    }
+  }
+  &__item {
+    cursor: pointer;
+    padding: 13px 30px;
+    border: none;
+    border-radius: 21px;
+    @include default-text;
+    &:hover {
+      background-color: $tag-color-hover;
+    }
+    &:active {
+      color: $main-color;
+      background-color: $tag-color-pressed;
+    }
+  }
+  &__arrows {
+    
+  }
+  &__btn-arrow {
+    cursor: pointer;
+    color: $button-color-normal;
+    border: 1px solid $button-color-normal;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    transition: .1s;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    &:first-of-type {
+      cursor: default;
+      opacity: .2;
+    }
+    &:last-of-type {
+      margin-left: 8px;
+      &:active {
+        padding-left: 20px;
+      }
+    }
+    &:hover {
+      background-color: $slider-btn-hover;
+    }
+  }
+}
+
+.catalog {
+  &__item {
+    margin-left: 20px;
+    position: relative;
+    width: 310px;
+    height: 370px;
+    box-sizing: border-box;
+    border: 1px solid $line-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+  &__item-container {
+    margin-top: 40px;
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  &__item-nav {
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - 20px);
+    width: 40px;
+    height: 8px;
+    display: flex;
+  }
+  &__item-dot {
+    width: 6px;
+    height: 6px;
+    border: 1px solid $button-color-normal;
+    border-radius: 50%;
+    margin-left: 8px;
+    &:first-of-type {
+      background-color: $button-color-normal;
+      margin-left: 0;
+    }
+  }
+  &__item-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  &__item-tag {
+    position: absolute;
+    top: 16px;
+    left: 24px;
+    padding: 4px 11px;
+    border-radius: 15px;
+    @include tag-text;
+    background-color: $tag-color-sale;
+  }
+  &__item-like {
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+  }
+  &__item-more {
+    cursor: pointer;
+    position: absolute;
+    top: 53px;
+    right: 20px;
+  }
+  &__item-info {
+    margin-left: 0;
+    padding-left: 24px;
+  }
+  &__price-info {
+    width: 100%;
+    margin: 26px 0 0 0;
+    display: flex;
+    align-items: center;
+    text-align: start;
+  }
+  &__price {
+    @include price;
+  }
+  &__discount {
+    margin: 0 0 0 8px;
+    text-decoration: line-through;
+    @include discount;
+  }
+  &__discount-tag {
+    position: absolute;
+    bottom: 86px;
+    right: 24px;
+    padding: 4px 8px;
+    border-radius: 15px;
+    @include tag-text;
+    background-color: $tag-color-discount;
+  }
+  &__item-description {
+    margin: 16px 0 0 0;
+    @include item-description;
+  }
+}

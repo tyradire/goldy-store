@@ -1,0 +1,152 @@
+@import '../scss/variables.scss';
+
+.product {
+  max-width: 1300px;
+  margin: 120px auto 0;
+  &__title {
+    text-align: start;
+    @include popular-title;
+  }
+  &__top-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__image-container {
+    width: 550px;
+    height: 550px;
+  }
+  &__btn-arrow {
+    cursor: pointer;
+    color: $button-color-normal;
+    border: 1px solid $button-color-normal;
+    background-color: transparent;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    transition: .1s;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    &:first-of-type {
+      &:active {
+        padding-right: 20px;
+      }
+    }
+    &:last-of-type {
+      margin-left: 8px;
+      &:active {
+        padding-left: 20px;
+      }
+    }
+    &:hover {
+      background-color: $slider-btn-hover;
+    }
+  }
+  &__wrapper {
+    display: flex;
+  }
+  &__info-container {
+    width: 650px;
+    margin-left: 100px;
+  }
+  &__rating {
+    display: flex;
+    align-items: center;
+  }
+  &__item-title {
+    margin: 24px 0 20px;
+    @include product-title;
+  }
+  &__article {
+    margin: 0;
+    @include discount;
+  }
+  &__price-container {
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $line-color;
+  }
+  &__discount-info {
+    margin-top: 36px;
+    display: flex;
+    align-items: center;
+  }
+  &__price {
+    @include price;
+  }
+  &__discount {
+    margin: 0 0 0 16px;
+    text-decoration: line-through;
+    @include discount;
+  }
+  &__discount-tag {
+    width: 50px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 32px 0 0 16px;
+    border-radius: 15px;
+    @include tag-text;
+    background-color: $tag-color-discount;
+  }
+  &__countdown {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px 0 0 36px;
+    width: 224px;
+    height: 64px;
+    background-color: $countdown-color;
+  }
+}
+
+.countdown {
+  &__cell {
+    margin: 0 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 40px;
+    text-align: center;
+    background-color: $main-color;
+    border: 1px solid $border-color;
+  }
+  &__value {
+    @include countdown-value;
+  }
+  &__text {
+    @include countdown-text;
+  }
+}
+
+.rating {
+  &__star {
+    padding: 0;
+    cursor: pointer;
+    margin-left: 6px;
+    width: 17px;
+    height: 17px;
+    background-color: transparent;
+    border: none;
+    svg path {
+      fill: $promo-soft-orange;
+    }
+    &:first-of-type {
+      margin-left: 0;
+    }
+    &:last-of-type svg path {
+      fill: $main-color;
+    }
+    &:hover svg path {
+      fill: $promo-soft-orange;
+    }
+  }
+  &__value {
+    padding-left: 10px;
+    @include default-text;
+  }
+}

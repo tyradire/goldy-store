@@ -1,0 +1,71 @@
+@import '../scss/variables.scss';
+
+.promo {
+  max-width: 1300px;
+  margin: 120px auto 0;
+  display: flex;
+  &__item {
+    position: relative;
+    background-color: $item-color;
+    width: 420px;
+    height: 290px;
+    margin-left: 20px;
+    overflow: hidden;
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+  &__info-container {
+    position: relative;
+  }
+  &__item-offer {
+    padding: 72px 0 0 26px;
+    width: 222px;
+    text-transform: uppercase;
+    text-align: start;
+    @include promo-offer;
+  }
+  &__item-discount {
+    margin-top: 22px;
+    width: 194px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &_dark-cyan {
+      background-color: $promo-dark-cyan;
+    }
+    &_bright-red {
+      background-color: $promo-bright-red;
+    }
+    &_soft-orange {
+      background-color: $promo-soft-orange;
+    }
+    p {
+      &:first-of-type {
+        margin-left: 26px;
+        @include promo-discount;
+      }
+      &:last-of-type {
+        margin: 0 27px 0 13px;
+        @include promo-value;
+      }
+    }
+  }
+  &__item-image {
+    position: absolute;
+  }
+}
+
+#offer-brilliants {
+  top: 0;
+  right: 18px;
+}
+#offer-rings {
+  top: 0;
+  right: 0;
+}
+#offer-e-rings {
+  top: 41px;
+  right: 0;
+}

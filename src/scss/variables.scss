@@ -6,6 +6,7 @@ $countdown-color: #f5f5f5;
 
 $button-color-normal: #303030;
 $button-color-hover: #4f4f4f;
+$button-basket-hover: #505050;
 $button-color-pressed: #000000;
 
 $tag-color-normal: #f0f0f0;
@@ -32,6 +33,15 @@ $slider-btn-hover: #f5f5f5;
 $promo-dark-cyan: #43807f;
 $promo-bright-red: #e24b33;
 $promo-soft-orange: #e1a661;
+
+$light-gray: #d9d9d9;
+$soft-orange: #f1cb7e;
+$orange: #ea8c48;
+$soft-green: #a7e492;
+$border-color: #dadada;
+
+$secondary-button-hover: #979797;
+$secondary-button-active: #e24b33;
 
 @mixin default-text {
   font-family: 'Inter', sans-serif;
@@ -128,6 +138,28 @@ $promo-soft-orange: #e1a661;
   color: $main-color;
 }
 
+@mixin product-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 600;
+  color: $text-default;
+}
+
+@mixin button-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+@mixin secondary-button {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 300;
+}
+
 @mixin title {
   font-family: 'Prata', serif;
   font-size: 32px;
@@ -160,6 +192,14 @@ $promo-soft-orange: #e1a661;
   font-size: 14px;
   line-height: 22.4px;
   font-weight: 400;
+  color: $text-default;
+}
+
+@mixin info {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 500;
   color: $text-default;
 }
 

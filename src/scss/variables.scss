@@ -238,3 +238,11 @@ $secondary-button-active: #e24b33;
   color: $text-default;
   margin: 0;
 }
+
+@mixin article-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  color: $text-default;
+}

@@ -1,0 +1,45 @@
+@import '../scss/variables.scss';
+
+.articles {
+  max-width: 1300px;
+  margin: 120px auto 0;
+  &__title {
+    text-align: start;
+    @include popular-title;
+  }
+  &__top-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__link {
+    cursor: pointer;
+    margin: 0;
+    text-align: end;
+    text-transform: uppercase;
+    @include button-text;
+  }
+  &__list {
+    margin: 40px 0 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+  }
+  &__item {
+    cursor: pointer;
+    width: 310px;
+  }
+  &__image {
+    width: 100%;
+    height: 381px;
+  }
+  &__date {
+    @include discount;
+    margin: 20px 0 0 0;
+  }
+  &__description {
+    @include article-title;
+    margin: 12px 0 0 0;
+  }
+}

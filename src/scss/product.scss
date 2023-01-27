@@ -314,6 +314,10 @@
     &:hover {
       border: 1px solid $button-color-normal;
     }
+    &:active {
+      color: $main-color;
+      background-color: $button-color-normal;
+    }
   }
 }
 

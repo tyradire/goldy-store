@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  function hybridSoloInit(elSelect) {
+  const hybridSoloInit = (elSelect) => {
   const elSelectNative = elSelect.getElementsByClassName("js-select-native")[0];
   const elSelectCustom = elSelect.getElementsByClassName("js-select-custom")[0];
   const elSelectCustomBox = elSelectCustom.children[0];
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  function openSelectCustom() {
+  const openSelectCustom = () => {
     elSelectCustom.classList.add("isActive");
     elSelectCustom.setAttribute("aria-hidden", false);
 
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener("keydown", supportKeyboardNavigation);
   }
 
-  function closeSelectCustom() {
+  const closeSelectCustom = () => {
     elSelectCustom.classList.remove("isActive");
 
     elSelectCustom.setAttribute("aria-hidden", true);
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.removeEventListener("keydown", supportKeyboardNavigation);
   }
 
-  function updateCustomSelectHovered(newIndex) {
+  const updateCustomSelectHovered = (newIndex) => {
     const prevOption = elSelectCustomOpts.children[optionHoveredIndex];
     const option = elSelectCustomOpts.children[newIndex];
 
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     optionHoveredIndex = newIndex;
   }
 
-  function updateCustomSelectChecked(value, text) {
+  const updateCustomSelectChecked = (value, text) => {
     const prevValue = optionChecked;
 
     const elPrevOption = elSelectCustomOpts.querySelector(
@@ -81,14 +81,14 @@ document.addEventListener('DOMContentLoaded', () => {
     optionChecked = value;
   }
 
-  function watchClickOutside(e) {
+  const watchClickOutside = (e) => {
     const didClickedOutside = !elSelectCustom.contains(e.target);
     if (didClickedOutside) {
       closeSelectCustom();
     }
   }
 
-  function supportKeyboardNavigation(e) {
+  const supportKeyboardNavigation = (e) => {
     if (e.keyCode === 40 && optionHoveredIndex < optionsCount - 1) {
       let index = optionHoveredIndex;
       e.preventDefault();
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 }
 
-function hybridSelectInit() {
+const hybridSelectInit = () => {
   const allSelectsInPage = document.getElementsByClassName("js-hybrid-select");
 
   for (let i = 0; i < allSelectsInPage.length; i++) {

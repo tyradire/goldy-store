@@ -22,13 +22,12 @@
       margin-left: 50px;
     }
     a {
+      text-decoration: none;
+      color: $button-color-normal;
       cursor: pointer;
     }
     &:hover {
       opacity: .5;
-    }
-    &:active {
-      opacity: 0;
     }
   }
   &__form {

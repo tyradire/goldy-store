@@ -1,7 +1,9 @@
 @import '../scss/variables.scss';
 
 .header {
+  position: relative;
   max-width: 1300px;
+  height: 52px;
   margin: 24px auto 0;
   display: flex;
   justify-content: space-between;
@@ -10,6 +12,9 @@
     display: flex;
   }
   &__logo {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 92.5px);
     width: 185px;
     height: 52px;
     cursor: pointer;
@@ -68,8 +73,12 @@
 }
 
 .nav {
+  &__links span {
+    margin: 0 10px;
+  }
   &__link {
     @include default-text;
+    text-decoration: none;
     cursor: pointer;
   }
   &__buttons {

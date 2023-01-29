@@ -8,6 +8,8 @@ const htmlmin = require('gulp-htmlmin');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const sync = require('browser-sync').create();
+const gulp = require('gulp');
+const ghPages = require('gulp-gh-pages');
 
 const sass = sassGulp(sassSass);
 
@@ -69,6 +71,11 @@ function serve() {
   watch('src/fonts/**.ttf', series(fonts)).on('change', sync.reload)
   watch('src/scripts/**.js', series(scripts)).on('change', sync.reload)
 }
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
 
 exports.build = series(clear, copyImages, scripts, scss, html, fonts);
 exports.serve = series(clear, copyImages, scripts, scss, html, fonts, serve);

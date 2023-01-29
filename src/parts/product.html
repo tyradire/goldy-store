@@ -12,6 +12,21 @@
   </div>
   <div class="product__wrapper">
     <div class="product__image-container">
+      <div class="product__tags">
+        <div>New</div>
+        <div>Хит</div>
+        <div>Sale</div>
+      </div>
+      <div class="product__arrow product__arrow_left">
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.07102 0.999977L8.14209 8.07104L1.07102 15.1421" stroke="#303030" stroke-width="2"/>
+          </svg>
+      </div>
+      <div class="product__arrow">
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.07102 0.999977L8.14209 8.07104L1.07102 15.1421" stroke="#303030" stroke-width="2"/>
+          </svg>
+      </div>
       <img class="product__image" src="../images/product-of-the-day.jpg" alt="украшение"/>
     </div>
     <div class="product__info-container">
@@ -53,15 +68,15 @@
         <span class="product__discount-tag">-45%</span>
         <div class="product__countdown">
           <div class="countdown__cell">
-            <p class="countdown__value">12</p><p class="countdown__text">часов</p>
+            <p class="countdown__value" id="hours">12</p><p class="countdown__text">часов</p>
           </div>
            :
           <div class="countdown__cell">
-            <p class="countdown__value">46</p><p class="countdown__text">минут</p>
+            <p class="countdown__value" id="minutes">46</p><p class="countdown__text">минут</p>
           </div>
            : 
           <div class="countdown__cell">
-            <p class="countdown__value">51</p><p class="countdown__text">секунд</p>
+            <p class="countdown__value" id="seconds">51</p><p class="countdown__text">секунд</p>
           </div>
         </div>
       </div>

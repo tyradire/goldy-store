@@ -2,7 +2,7 @@
 
 .articles {
   max-width: 1300px;
-  margin: 120px auto 0;
+  margin: 120px auto 80px;
   &__title {
     text-align: start;
     @include popular-title;

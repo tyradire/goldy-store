@@ -7,6 +7,9 @@
   &__item {
     position: relative;
     background-color: $item-color;
+    background-image: url('../images/union-sm.svg');
+    background-repeat: no-repeat;
+    background-position: 0 25px;
     width: 420px;
     height: 290px;
     margin-left: 20px;

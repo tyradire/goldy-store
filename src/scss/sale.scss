@@ -146,12 +146,21 @@
     position: absolute;
     top: 16px;
     right: 20px;
+    &:hover svg path {
+      fill: $secondary-button-hover;
+    }
+    &:active svg path {
+      fill: $secondary-button-active;
+    }
   }
   &__item-more {
     cursor: pointer;
     position: absolute;
     top: 53px;
     right: 20px;
+    &:hover svg path {
+      fill: $secondary-button-hover;
+    }
   }
   &__item-info {
     margin-left: 0;

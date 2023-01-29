@@ -15,6 +15,7 @@ $tag-color-pressed: #303030;
 $tag-color-sale: #5b8a8f;
 $tag-color-hit: #e1a66b;
 $tag-color-discount: #e24b33;
+$tag-color-new: #495159;
 
 $like-color-normal: #c9c9c9;
 $like-color-hover: #969696;
@@ -252,7 +253,7 @@ $additional-info: #d3d3d3;
 @mixin article-title {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
-  line-height: 1;
+  line-height: 24px;
   font-weight: 500;
   color: $text-default;
 }

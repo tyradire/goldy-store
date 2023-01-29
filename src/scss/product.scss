@@ -11,8 +11,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 33px;
   }
   &__image-container {
+    position: relative;
     width: 550px;
     height: 550px;
   }
@@ -111,6 +113,47 @@
     display: flex;
     justify-content: space-between;
   }
+  &__tags {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    display: flex;
+    div {
+      width: 50px;
+      height: 21px;
+      margin-left: 4px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include tag-text;
+      &:first-of-type {
+        margin-left: 0;
+        background-color: $tag-color-new;
+      }
+      &:nth-child(2) {
+        background-color: $promo-soft-orange;
+      }
+      &:last-of-type {
+        background-color: $tag-color-sale;
+      }
+    }
+  }
+  &__arrow {
+    cursor: pointer;
+    width: 10px;
+    height: 16px;
+    position: absolute;
+    top: calc(50% - 8px);
+    right: 16px;
+    &_left {
+      cursor: default;
+      right: 0;
+      left: 16px;
+      transform: rotate(180deg);
+      opacity: .2;
+    }
+  }
 }
 
 .nav-area {
@@ -118,6 +161,7 @@
   flex-direction: column;
   width: 400px;
   &__btn-basket {
+    width: 400px;
     text-transform: uppercase;
     text-align: center;
     @include button-text;
@@ -134,6 +178,7 @@
     }
   }
   &__btn-buy {
+    width: 400px;
     margin-top: 10px;
     text-transform: uppercase;
     text-align: center;
@@ -260,6 +305,9 @@
       border: 1px solid $button-color-normal;
       cursor: default;
     }
+    &:last-of-type {
+      opacity: .3;
+    };
     span {
       width: 24px;
       height: 24px;

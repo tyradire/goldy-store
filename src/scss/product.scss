@@ -269,21 +269,32 @@
 }
 
 .sizes {
+  &__top-side {
+    display: flex;
+    align-items: center;
+  }
   &__subtitle {
     display: flex;
     align-items: center;
     @include product-subtitle;
-    span {
-      cursor: pointer;
-      margin-left: 8px;
-      width: 18px;
-      height: 18px;
+    margin: 0;
+  }
+  &__additional-icon {
+    cursor: pointer;
+    margin-left: 8px;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include info;
+    border-radius: 50%;
+    background-color: $line-color;
+    &:hover {
+      background-color: $additional-info;
+    }
+    &:hover + .sizes__additional-info{
       display: flex;
-      justify-content: center;
-      align-items: center;
-      @include info;
-      border-radius: 50%;
-      background-color: $line-color;
     }
   }
   &__list {
@@ -318,6 +329,34 @@
       color: $main-color;
       background-color: $button-color-normal;
     }
+  }
+  &__additional-wrapper {
+    position: relative;
+  }
+  &__additional-info {
+    width: 271px;
+    height: 148px;
+    position: absolute;
+    top: -160px;
+    left: -119px;
+    display: none;
+    box-sizing: border-box;
+    background-color: $main-color;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    p {
+      margin: 0;
+      padding: 24px;
+      @include additional-text;
+    }
+  }
+  &__triangle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: $main-color;
+    bottom: -4px;
+    left: calc(50% - 4px);
+    transform: rotate(45deg);
   }
 }
 

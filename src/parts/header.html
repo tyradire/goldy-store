@@ -1,11 +1,28 @@
 <header class="header">
   <div class="header__info">
     <div class="info__city-wrapper">
-      <img id="flag" src="../images/nav.svg" alt="флаг навигации" />
-      <p class="info__city-unit">Санкт-Петербург</p>
-      <button class="info__btn-select">
-        <img id="rectangle" src="../images/rectangle.svg" alt="выбор города" />
-      </button>
+      <div class="header__city-select">
+        <div class="city-select js-hybrid-select">
+          <div class="city-select__wrapper">
+            <select class="city-select__native js-select-native" aria-labelledby="city-label">
+              <option value="c-sel" disabled="" selected="">Санкт-Петербург</option>
+              <option value="c-spb">Санкт-Петербург</option>
+              <option value="c-mos">Москва</option>
+              <option value="c-nn">Нижний Новгород</option>
+              <option value="c-rnd">Ростов-на-Дону</option>
+            </select>
+            <div class="city-select__custom js-select-custom" aria-hidden="true">
+              <div class="city-select__custom-trigger">Санкт-Петербург</div>
+              <div class="city-select__custom-options">
+                <div class="city-select__custom-option" data-value="c-spb">Санкт-Петербург</div>
+                <div class="city-select__custom-option" data-value="c-mos">Москва</div>
+                <div class="city-select__custom-option" data-value="c-nn">Нижний Новгород</div>
+                <div class="city-select__custom-option" data-value="c-rnd">Ростов-на-Дону</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="info__phone-wrapper">
       <img id="phone" src="../images/phone.svg" alt="телефон" />

@@ -43,6 +43,8 @@ $border-color: #dadada;
 $secondary-button-hover: #979797;
 $secondary-button-active: #e24b33;
 
+$additional-info: #d3d3d3;
+
 @mixin default-text {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
@@ -50,6 +52,14 @@ $secondary-button-active: #e24b33;
   font-weight: 400;
   color: $text-default;
   margin: 0;
+}
+
+@mixin additional-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 19.6px;
+  font-weight: 400;
+  color: $text-default;
 }
 
 @mixin discount {
